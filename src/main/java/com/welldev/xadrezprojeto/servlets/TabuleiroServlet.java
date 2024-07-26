@@ -25,8 +25,7 @@ public class TabuleiroServlet extends HttpServlet {
 
         String tabuleiro = partida.getTabuleiro().gerarTabuleiro();
 
-        resp.setContentType("image/svg+xml");
-        resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().write(tabuleiro);
+        req.setAttribute("tabuleiro", tabuleiro);
+        req.getRequestDispatcher("/tabuleiro.jsp").forward(req, resp);
     }
 }

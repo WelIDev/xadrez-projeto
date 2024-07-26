@@ -4,9 +4,9 @@ public class Jogador {
 
     private int id;
     private String nome;
-    private int email;
+    private String email;
 
-    public Jogador(int id, String nome, int email) {
+    public Jogador(int id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -28,11 +28,11 @@ public class Jogador {
         this.nome = nome;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 }
