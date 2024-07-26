@@ -1,4 +1,4 @@
-package com.welldev.xadrezprojeto.model;
+package com.welldev.xadrezprojeto.model.partida;
 
 import java.io.Serializable;
 

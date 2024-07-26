@@ -1,4 +1,4 @@
-package com.welldev.xadrezprojeto.model;
+package com.welldev.xadrezprojeto.model.partida;
 
 public class Jogador {
 

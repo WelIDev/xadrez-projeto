@@ -1,6 +1,6 @@
 package com.welldev.xadrezprojeto.servlets;
 
-import com.welldev.xadrezprojeto.model.Partida;
+import com.welldev.xadrezprojeto.model.partida.Partida;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

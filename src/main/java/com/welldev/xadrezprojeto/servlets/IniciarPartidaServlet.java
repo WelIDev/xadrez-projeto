@@ -1,6 +1,8 @@
 package com.welldev.xadrezprojeto.servlets;
 
-import com.welldev.xadrezprojeto.model.Partida;
+import com.welldev.xadrezprojeto.model.partida.Partida;
+import com.welldev.xadrezprojeto.model.partida.Peca;
+import com.welldev.xadrezprojeto.model.pecas.Rei;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -17,6 +19,8 @@ public class IniciarPartidaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Partida partida = new Partida();
 
+        Peca reiBranco = new Rei("branco", 4, 0);
+        partida.getTabuleiro().colocarPeca(reiBranco);
         req.getSession().setAttribute("partida", partida);
 
         resp.sendRedirect("tabuleiro");

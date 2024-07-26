@@ -1,4 +1,4 @@
-package com.welldev.xadrezprojeto.model;
+package com.welldev.xadrezprojeto.model.partida;
 
 public abstract class Peca {
 
@@ -41,4 +41,6 @@ public abstract class Peca {
     protected boolean posicaoValida(int posX, int posY) {
         return posX >= 0 && posY >= 0 && posX < 8 && posY < 8;
     }
+
+    public abstract String geraImagem();
 }

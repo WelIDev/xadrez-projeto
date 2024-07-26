@@ -1,4 +1,4 @@
-package com.welldev.xadrezprojeto.model;
+package com.welldev.xadrezprojeto.model.partida;
 
 public class Tabuleiro {
 
@@ -28,6 +28,10 @@ public class Tabuleiro {
         return pecas;
     }
 
+    public void colocarPeca(Peca peca) {
+        pecas[peca.getPosY()][peca.getPosX()] = peca;
+    }
+
     public String gerarTabuleiro() {
         int tamanhoCasa = 50;
         StringBuilder tabuleiro = new StringBuilder();
@@ -42,7 +46,8 @@ public class Tabuleiro {
                         .append("\" fill=\"").append(cor).append("\"/>");
                 Peca peca = pecas[y][x];
                 if (peca != null) {
-                    // Aplica a criação das peças
+                    String imagemPeca = peca.geraImagem();
+                    tabuleiro.append(imagemPeca);
                 }
             }
         }

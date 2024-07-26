@@ -1,4 +1,4 @@
-<%@ page import="com.welldev.xadrezprojeto.model.Partida, com.welldev.xadrezprojeto.model.Peca" %>
+<%@ page import="com.welldev.xadrezprojeto.model.partida.Partida, com.welldev.xadrezprojeto.model.partida.Peca" %>
 <%@page contentType="text/html" import="java.util.Date, java.text.*"
         pageEncoding="ISO-8859-1"%>
 
