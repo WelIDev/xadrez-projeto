@@ -20,7 +20,33 @@ public class Tabuleiro {
         return colunas;
     }
 
-    public Peca getPecas(int x, int y) {
+    public Peca getPeca(int x, int y) {
         return pecas[y][x];
+    }
+
+    public Peca[][] getPecas() {
+        return pecas;
+    }
+
+    public String gerarTabuleiro() {
+        int tamanhoCasa = 50;
+        StringBuilder tabuleiro = new StringBuilder();
+        tabuleiro.append("<svg width=\"").append(tamanhoCasa * colunas).append("\" height=\"")
+                .append(tamanhoCasa * linhas).append("\" xmlns=\"http://www.w3.org/2000/svg\">");
+
+        for (int y = 0; y < linhas; y++) {
+            for (int x = 0; x < colunas; x++) {
+                String cor = (x + y) % 2 == 0 ? "#fff" : "#000";
+                tabuleiro.append("<rect x=\"").append(x * tamanhoCasa).append("\" y=\"").append(y * tamanhoCasa)
+                        .append("\" width=\"").append(tamanhoCasa).append("\" height=\"").append(tamanhoCasa)
+                        .append("\" fill=\"").append(cor).append("\"/>");
+                Peca peca = pecas[y][x];
+                if (peca != null) {
+                    // Aplica a criação das peças
+                }
+            }
+        }
+        tabuleiro.append("</svg>");
+        return tabuleiro.toString();
     }
 }

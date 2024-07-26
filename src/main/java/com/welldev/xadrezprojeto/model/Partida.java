@@ -13,13 +13,18 @@ public class Partida implements Serializable {
     public Jogador jogador2;
     public Jogador jogadorAtual;
 
-    public Partida(Jogador jogador1, Jogador jogador2) {
+    public Partida() {
+        this.tabuleiro = new Tabuleiro(LINHA_TABULEIRO, COLUNA_TABULEIRO);
+        inicializarTabuleiro();
+    }
+
+    /*public Partida(Jogador jogador1, Jogador jogador2) {
         this.jogador1 = jogador1;
         this.jogador2 = jogador2;
         this.jogadorAtual = jogador1;
         this.tabuleiro = new Tabuleiro(LINHA_TABULEIRO, COLUNA_TABULEIRO);
         inicializarTabuleiro();
-    }
+    }*/
 
     private void inicializarTabuleiro() {
         //Coloca as peças na posições iniciais

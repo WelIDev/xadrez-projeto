@@ -2,22 +2,22 @@ package com.welldev.xadrezprojeto.model;
 
 public abstract class Peca {
 
-    private String color;
+    private String cor;
     private int posX;
     private int posY;
 
     public Peca(String cor, int posX, int posY) {
-        this.color = cor;
+        this.cor = cor;
         this.posX = posX;
         this.posY = posY;
     }
 
-    public String getColor() {
-        return color;
+    public String getCor() {
+        return cor;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
     public int getPosX() {
